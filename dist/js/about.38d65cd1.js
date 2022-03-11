@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkspa_pwa_rick_and_morty_vue_stylus"]=self["webpackChunkspa_pwa_rick_and_morty_vue_stylus"]||[]).push([[443],{4335:function(a,n,s){s.r(n),s.d(n,{default:function(){return l}});var u=s(3396);const t={class:"about"},r=(0,u._)("h1",null,"This is an about page",-1),e=[r];function _(a,n){return(0,u.wg)(),(0,u.iD)("div",t,e)}var c=s(89);const i={},o=(0,c.Z)(i,[["render",_]]);var l=o}}]);
-//# sourceMappingURL=about.38d65cd1.js.map

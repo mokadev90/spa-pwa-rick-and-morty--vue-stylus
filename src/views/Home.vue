@@ -1,8 +1,15 @@
 <template>
   <h2>
-    SPA basada en la exitosa serie Rick and Morty donde podrás consultar sobre
-    sus personajes y lugares.
+    Single Page Application based on the successfull series Rick and Morty where
+    you can search about its characters and locations.
   </h2>
+  <h2>Also, this page is a Progressive Web App, so that you can install it.</h2>
 </template>
 
-<style lang="stylus"></style>
+<style lang="stylus" scoped>
+
+h2
+    font-size 2rem
+    text-align center
+    margin top
+</style>

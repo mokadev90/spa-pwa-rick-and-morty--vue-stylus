@@ -8,8 +8,8 @@ import { RouterLink, RouterView } from 'vue-router';
     <h1>Rick <span>and</span> Morty</h1>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/characters">Personajes</RouterLink>
-      <RouterLink to="/locations">Lugares</RouterLink>
+      <RouterLink to="/characters">Characters</RouterLink>
+      <RouterLink to="/locations">Locations</RouterLink>
     </nav>
   </header>
   <div class="container">
@@ -18,6 +18,8 @@ import { RouterLink, RouterView } from 'vue-router';
 </template>
 
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
 @font-face
     font-family Schwifty
     src url(assets/get_schwifty.ttf)
@@ -27,7 +29,7 @@ $secondary =#88d684
 
 html
     font-size 16px
-    font-family Poppins
+    font-family 'Schoolbell', cursive;
     margin 0
     padding 0
 
@@ -53,8 +55,9 @@ header
         margin-left 2rem
 
 h2
-    color $secondary
+    color #c1f380
     margin 0
+    margin-top 3rem
 
 a
     text-decoration none
@@ -63,7 +66,7 @@ a
     color #fff700
     padding .5rem
     border-radius 10px 10px 0 0
-    font-family Poppins
+    font-family 'Schoolbell', cursive;
 
 .container
     background-color $primary

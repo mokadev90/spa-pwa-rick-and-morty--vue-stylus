@@ -1,0 +1,52 @@
+[debug] [2022-03-11T19:43:01.323Z] ----------------------------------------------------------------------
+[debug] [2022-03-11T19:43:01.324Z] Command:       /snap/node/5953/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-03-11T19:43:01.324Z] CLI Version:   10.2.2
+[debug] [2022-03-11T19:43:01.325Z] Platform:      linux
+[debug] [2022-03-11T19:43:01.325Z] Node Version:  v16.14.0
+[debug] [2022-03-11T19:43:01.325Z] Time:          Fri Mar 11 2022 16:43:01 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-03-11T19:43:01.325Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-11T19:43:01.327Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-03-11T19:43:01.377Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-11T19:43:01.377Z] > authorizing via signed-in user (romeramatias@gmail.com)
+[debug] [2022-03-11T19:43:01.378Z] [iam] checking project spa-pwa-rick-and-morty-vue for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-03-11T19:43:01.378Z] > refreshing access token with scopes: []
+[debug] [2022-03-11T19:43:01.378Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-11T19:43:01.383Z] FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: getaddrinfo EAI_AGAIN firebase-public.firebaseio.com
+    at ClientRequest.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/node-fetch/lib/index.js:1491:11)
+    at ClientRequest.emit (node:events:520:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:442:9)
+    at TLSSocket.emit (node:events:520:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[debug] [2022-03-11T19:43:01.390Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-03-11T19:43:01.391Z] > refreshing access token with scopes: []
+[debug] [2022-03-11T19:43:01.391Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-11T19:43:01.394Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-03-11T19:43:01.399Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (/usr/local/lib/node_modules/firebase-tools/lib/auth.js:145:12)
+    at refreshTokens (/usr/local/lib/node_modules/firebase-tools/lib/auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:147:23)
+    at async Client.addAuthHeader (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:138:21)
+    at async Client.request (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:94:34)
+    at async getFirebaseProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:290:21)
+    at async getDefaultHostingSite (/usr/local/lib/node_modules/firebase-tools/lib/getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (/usr/local/lib/node_modules/firebase-tools/lib/requireHostingSite.js:9:18)
+    at async Object.fn (/usr/local/lib/node_modules/firebase-tools/lib/commands/deploy.js:73:9)
+    at async /usr/local/lib/node_modules/firebase-tools/lib/command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project spa-pwa-rick-and-morty-vue. Please make sure the project exists and your account has permission to access it.
